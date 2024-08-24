@@ -20,12 +20,6 @@ app.use(bodyParser.json());
 app.use("/api/user", require("./routes/UserRoute"));
 app.use("/api/result", require("./routes/ResultRoute"));
 
-// Catch-all route handler for 404 errors
-app.use((req, res, next) => {
-  res.status(404).send("404: Not Found");
-});
-
-// Start the server
 app.listen(process.env.PORT, () => {
   connectDB();
   console.log(`Server is running on ${process.env.IP}:${process.env.PORT}`);
