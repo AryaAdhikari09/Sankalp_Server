@@ -7,13 +7,13 @@ var bodyParser = require("body-parser");
 const connectDB = require("./database");
 
 app.all('*', (req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://sankalp-client1.vercel.app/");
+  res.header("Access-Control-Allow-Origin", "https://sankalp-client1.vercel.app");
   next();
 });
 
 app.use(
   cors({
-    origin: ["http://127.0.0.1:3000", process.env.CLIENT_URL, "http://localhost:5173","https://sankalp-client1.vercel.app/"],
+    origin: ["http://127.0.0.1:3000", process.env.CLIENT_URL, "http://localhost:5173","https://sankalp-client1.vercel.app"],
     credentials: true,
   })
 );
