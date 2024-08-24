@@ -29,4 +29,5 @@ app.use((req, res, next) => {
 app.listen(process.env.PORT, () => {
   connectDB();
   console.log(`Server is running on ${process.env.IP}:${process.env.PORT}`);
+  console.log("Server is live");
 });
