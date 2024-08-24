@@ -10,10 +10,10 @@ const connectDB = require("./database");
 app.use(
   cors({
     origin: [
-      "http://127.0.0.1:3000",
+      // "http://127.0.0.1:3000",
       process.env.CLIENT_URL,
-      "http://localhost:5173",
-      "https://sankalp-lrn6khqjv-aryas-projects-6ac239bc.vercel.app"
+      // "http://localhost:5173",
+      // "https://sankalp-lrn6khqjv-aryas-projects-6ac239bc.vercel.app"
     ],
     credentials: true,
   })
