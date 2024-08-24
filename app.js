@@ -6,14 +6,15 @@ var bodyParser = require("body-parser");
 
 const connectDB = require("./database");
 
-app.all('*', (req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "https://reading-test.vercel.app/");
-  next();
-});
-
+// Set up CORS to allow your Vercel deployment
 app.use(
   cors({
-    origin: ["http://127.0.0.1:3000", process.env.CLIENT_URL, "http://localhost:5173","https://reading-test.vercel.app"],
+    origin: [
+      "http://127.0.0.1:3000",
+      process.env.CLIENT_URL,
+      "http://localhost:5173",
+      "https://sankalp-lrn6khqjv-aryas-projects-6ac239bc.vercel.app"
+    ],
     credentials: true,
   })
 );
