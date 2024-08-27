@@ -14,8 +14,7 @@ const resultSchema = new mongoose.Schema({
     required: true
   },
   correctWords: [{ type: String }],
-  incorrectWords: [{ type: String }],
-  continuousSequence: { type: Boolean, required: true }
+  incorrectWords: [{ type: String }]
 });
 
 const Result = mongoose.model('Result', resultSchema);
