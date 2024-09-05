@@ -14,7 +14,13 @@ const transcribeAudio = async (req, res) => {
         const formData = new FormData();
         formData.append('file', fs.createReadStream(filePath));
 
-        const response = await axios.post('http://localhost:5001/transcribe', formData, {
+        // const response = await axios.post('http://localhost:5001/transcribe', formData, {
+        //     headers: {
+        //         'Content-Type': 'multipart/form-data',
+        //     },
+        // });
+
+        const response = await axios.post('http://127.0.0.1:5001/transcribe', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },
