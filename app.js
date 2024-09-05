@@ -23,6 +23,7 @@ app.use(bodyParser.json());
 
 app.use("/api/user", require("./routes/UserRoute"));
 app.use("/api/result", require("./routes/ResultRoute"));
+app.use("/api/transcription", require("./routes/TranscriptionRoute"));
 
 app.listen(process.env.PORT, () => {
   connectDB();
